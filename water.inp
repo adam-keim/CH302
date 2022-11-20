@@ -1,0 +1,23 @@
+# coordinates from Avogadro creation
+! RKS B3LYP RIJCOSX SlowConv TightSCF 6-31G(d) def2-TZVP/C 
+! OPT FREQ UCO Normalprint
+
+
+%pal nprocs 2
+    end
+
+# ! RKS B3LYP RIJCOSX SlowConv TightSCF def2-TZVP def2-TZVP/C
+# ! OPT FREQ UCO Normalprint
+
+%scf MaxIter 700
+     end
+
+%geom MaxIter 500
+      end
+
+
+* xyz 0 1
+   H     -0.055193   -0.967690    0.474854
+   O     -0.538355   -0.911204   -0.342189
+   H     -1.465292   -0.944661   -0.132662
+*
