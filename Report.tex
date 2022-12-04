@@ -1,0 +1,183 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This is a (brief) model paper using the achemso class
+%% The document class accepts keyval options, which should include
+%% the target journal and optionally the manuscript type.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[journal=jacsat,manuscript=communication]{achemso}
+
+\setkeys{acs}{articletitle = true}
+\SectionsOn
+\SectionNumbersOn
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Place any additional packages needed here.  Only include packages
+%% which are essential, to avoid problems later.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{chemformula} % Formula subscripts using \ch{}
+\usepackage{hyperref}
+\usepackage{gensymb}
+\usepackage[T1]{fontenc} % Use modern font encodings
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% If issues arise when submitting your manuscript, you may want to
+%% un-comment the next line.  This provides information on the
+%% version of every file you have used.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\listfiles
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Place any additional macros here.  Please use \newcommand* where
+%% possible, and avoid layout-changing macros (which are not used
+%% when typesetting).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand*\mycommand[1]{\texttt{\emph{#1}}}
+\newcommand*\compound{\ch{Co(phen)2(NCS)2} }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Meta-data block
+%% ---------------
+%% Each author should be given as a separate \author command.
+%%
+%% Corresponding authors should have an e-mail given after the author
+%% name as an \email command. Phone and fax numbers can be given
+%% using \phone and \fax, respectively; this information is optional.
+%%
+%% The affiliation of authors is given after the authors; each
+%% \affiliation command applies to all preceding authors not already
+%% assigned an affiliation.
+%%
+%% The affiliation takes an option argument for the short name.  This
+%% will typically be something like "University of Somewhere".
+%%
+%% The \altaffiliation macro should be used for new address, etc.
+%% On the other hand, \alsoaffiliation is used on a per author basis
+%% when authors are associated with multiple institutions.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Adam Keim}
+\email{a_keim@coloradocollege.edu}
+
+\author{Amanda Bowman}
+\email{abowman@coloradocollege.edu}
+\affiliation[Colorado College]{Department of Chemistry, Colorado College, Colorado Springs}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The document title should be given as usual. Some journals require
+%% a running title from the author: this should be supplied as an
+%% optional argument to \title.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[An \textsf{achemso} demo]
+  {An investigation of the potential spin-crossover properties of \ch{Co(phen)2(NCS)2}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Some journals require a list of abbreviations or keywords to be
+%% supplied. These should be set up here, and will be printed after
+%% the title and author information, if needed.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\abbreviations{IR,NMR,UV}
+\keywords{American Chemical Society, \LaTeX}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The manuscript does not need to include \maketitle, which is
+%% executed automatically.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The abstract environment will automatically gobble the contents
+%% if an abstract is not used by the target journal.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+In this project, we synthesized a cobalt-containing complex and attempted to characterize its electronic structure using a variety of experimental and computational techniques. Our TGA+electromagnet findings yielded promising initial results about the compound's spin crossover properties, but the compound may have degraded, so further research is needed to confirm these properties. We plan to collaborate with other institutions that have SQUID magnetometers to further contribute to the growing body of research on spin crossover materials and their properties.
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Start the main part of the manuscript here.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+Spin crossover is a property exhibited by certain transition metal complexes where the electronic properties of the material change in response to external stimuli, such as temperature, pressure, or light. The phenomenon is caused by the splitting of the d orbital of the metal, which allows for both high-spin and low-spin configurations.  In the high-spin configuration, the complex adopts a configuration with more unpaired electrons because it is thermodynamically favorable for the electron to move up to the next orbital rather than couple with another electron in the lower orbital.  In the low-spin configuration, the energy gap is large enough that this "jump" is not thermodynamically favorable.
+
+In this project, I synthesized and attempted to characterize the electronic structure of \compound in an attempt to further understand its possible spin crossover properties.  This compound potentially exhibits spin crossover properties, since the \ch{Fe} analog (\ch{Fe(phen)2(NCS)2}) has been demonstrated to exhibit the desired property.  To characterize the spin crossover properties of the cobalt compound, I attempted to use IR, Raman, and TGA techniques, where TGA proved most useful, and would ideally use SQUID magnetometry.  
+
+I also attempted to use DFT techniques to computationally predict the electronic structure of both the high- and low-spin forms of \compound.  This was done in an attempt to be able to compare experimental and computational data to better understand the properties of the compound.  By better understanding the properties of the spin crossover of this particular compound, we hope to further our understanding of the broader mechanism by which spin crossover happens. 
+
+Because spin-crossover often exhibits a hysteresis curve (the material can exist in either state given certain conditions depending on its past), these materials can have the ability to store information, leading to interesting applications for non-NAND memory devices.  Also, since these compounds are able to respond to external stimulus, there is research into their applications as sensors of heat/light.
+
+
+\section{Materials \& Methods}
+
+\subsection{Synthesis}
+The synthesis of \compound was carried out according to the procedure described by \citeauthor{Synthesis}. 0.4217 g of cobalt (II) sulfate hexahydrate were dissolved in approximately 50 mL of water. Then, 0.2933 g of \ch{KSCN} were added to the solution, followed by approximately 25 mL of water to ensure that the thermometer was immersed in the solution. A solution of 0.5417 g of 1,10-phenanthroline in 50 mL of water was added dropwise to the reaction vessel, resulting in the formation of a hot pink precipitate. The precipitate was vacuum filtered after 5 minutes to ensure complete precipitation, and then washed with water and ethanol. The resulting compound was dried under vacuum overnight and had a final dry mass of 0.641 g, yielding 80\%.  
+\subsection{Characterization Methods}
+\subsubsection{Melting Point}
+Melting point characterization was attempted on an SRS Digimelt MPA160.
+\subsubsection{IR}
+IR Spectra of the compound were taken on a Bruker Alpha in the solid state.
+\subsubsection{Raman}
+We used a Renishaw Raman microscope to take spectra of the compound, with a 785nm laser and 1200l/mm grating.  The compound was placed onto a glass slide in the solid state.  This slide was then placed in a temperature-controlled heating stage.
+\subsubsection{TGA}
+All TGA was carried out on a TA Instruments TGA5500.  Initial decomposition experiments used an alumina ceramic pan, and all subsequent experiments used aluminum pans with stainless steel bales.  All samples were put directly in the pans.  
+\subsubsection{SQUID}
+Our initial contact for SQUID magnetometry had a temporarily non-functional instrument.  SQUID has proven to be one of the most powerful techniques for characterizing spin crossover compounds, and we are in touch with a number of other institutions in the area that may be able to help us accomplish SQUID magnetometry of our desired compound.
+
+\subsection{Computational Investigations}
+Computational studies were carried out on a HPC cluster at Colorado College.  Initial calculations were performed using ORCA 4.2.1 and later calculations wtih ORCA 5.0.3.  Initial pre-optimization XYZ coordinates were calculated using Avogadro on Mac OS X.  The calculations used a B3LYP basis set.  Full information on alternate basis sets, convergence criteria, etc. can be found in the supplemental information.  We were able to successfully complete geometry optimization and attempted vibrational frequency calculation of Raman and IR spectra.
+
+\section{Results \& Discussion}
+\subsection{Experimental}
+This compound proved elusive to characterization techniques.  Initial melting point measurements were unsuccessful, given that the instrument only goes up to 260 \degree C.  
+
+TGA proved to be the most useful technique we had accessible to us, and was the only confirmation of possible spin crossover properties that we were able to see during the short time available to carry out this research.  Through TGA, we were able to see that the compound began degrading around 380 \degree C, as shown in Figure \ref{fig:decomposition}. We were also able to use the TGA to verify possible spin crossover properties (The effective mass with the electromagnet on increased significantly with temperature.  
+
+\begin{figure}
+  \caption{Decomposition of \compound in TGA}
+  \label{fig:decomposition}
+\end{figure}
+
+\begin{figure}
+	\caption{Possible spin crossover of \compound in TGA}
+	\label{fig:TGA_crossover}
+\end{figure}
+
+\subsection{Computational}
+\subsection{Discussion}
+\section{Conclusion \& Further Directions}
+\subsection{Conclusion}
+\subsection{Further Directions for this research}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The "Acknowledgement" section can be given in all manuscript
+%% classes.  This should be given within the "acknowledgement"
+%% environment, which will make the correct section or running title.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{acknowledgement}
+The authors thank Dan Ellsworth in the computer science department for his help running the computational calculations on multi-node clusters.  
+
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The same is true for Supporting Information, which should use the
+%% suppinfo environment.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{suppinfo}
+
+All data from all instrument runs can be found at the below URL.
+\begin{itemize}
+  \item \url{https://github.com/adam-keim/CH302}
+\end{itemize}
+
+\end{suppinfo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The appropriate \bibliography command should be placed here.
+%% Notice that the class file automatically sets \bibliographystyle
+%% and also names the section correctly.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliography{bib}
+
+\end{document}
